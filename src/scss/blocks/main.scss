@@ -1,1 +1,21 @@
+@use '../mixins/responsive.scss' as *;
 
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  background: url(../../assets/images/bg-main-mobile.png) no-repeat;
+  background-size: contain;
+
+  @include responsive(tablet) {
+    background-size: cover;
+  }
+
+  @include responsive(laptop) {
+    flex-direction: row;
+    gap: 221px;
+    background: url(../../assets/images/bg-main-desktop.png) no-repeat;
+    min-height: 100vh;
+    background-size: contain;
+  }
+}

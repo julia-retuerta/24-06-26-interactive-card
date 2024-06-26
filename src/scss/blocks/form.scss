@@ -1,0 +1,38 @@
+.form {
+  max-width: 381px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--50 {
+      gap: 20px;
+    }
+  }
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.input {
+  height: 45px;
+  border-radius: 8px;
+  border: 2px solid var(--light-grey);
+  color: var(--deep-violet);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.button-confirm {
+  height: 53px;
+  border: none;
+  border-radius: 8px;
+  color: var(--white-color);
+  background-color: var(--deep-violet);
+}

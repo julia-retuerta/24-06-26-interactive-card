@@ -1,0 +1,55 @@
+@use '../mixins/responsive.scss' as *;
+
+.card {
+  width: 285px;
+
+  &--front {
+    position: relative;
+    top: 125px;
+    z-index: 1;
+  }
+
+  &--back {
+    position: relative;
+    top: -160px;
+    left: 60px;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 54px;
+    top: 17px;
+    left: 19px;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 19px;
+    left: 19px;
+    color: var(--white-color);
+    font-weight: 500;
+  }
+
+  &__number {
+    font-size: 18px;
+    letter-spacing: 2.2px;
+  }
+
+  &__container-name-exp {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1.286px;
+    margin-top: 17px;
+  }
+
+  @include responsive(laptop) {
+    width: 447px;
+
+    &__logo {
+      width: 84px;
+      top: 28px;
+      left: 32px;
+    }
+  }
+}

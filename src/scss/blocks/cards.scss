@@ -1,0 +1,13 @@
+@use '../mixins/responsive.scss' as *;
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  @include responsive(laptop) {
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+}
