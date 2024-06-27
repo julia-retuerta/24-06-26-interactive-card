@@ -1,17 +1,17 @@
 @use '../mixins/responsive.scss' as *;
 
 .main {
-  display: flex;
-  flex-direction: column;
-  padding: 32px 16px;
+  display: grid;
   background: url(../../assets/images/bg-main-mobile.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
+  max-height: 240px;
 
   @include responsive(laptop) {
-    flex-direction: row;
-    gap: 221px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     background: url(../../assets/images/bg-main-desktop.png) no-repeat;
     min-height: 100vh;
-    background-size: contain;
+    background-size: cover;
+    max-width: 483px;
   }
 }

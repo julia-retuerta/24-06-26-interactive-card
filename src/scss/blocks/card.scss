@@ -1,18 +1,33 @@
 @use '../mixins/responsive.scss' as *;
 
 .card {
-  width: 285px;
+  width: 286px;
+
+  @include responsive(laptop) {
+    width: 447px;
+  }
 
   &--front {
-    position: relative;
-    top: 125px;
+    position: absolute;
+    top: 126px;
+    left: 16px;
     z-index: 1;
+
+    @include responsive(laptop) {
+      top: -270px;
+      left: 164px;
+    }
   }
 
   &--back {
-    position: relative;
-    top: -160px;
-    left: 60px;
+    position: absolute;
+    top: 32px;
+    left: 73px;
+
+    @include responsive(laptop) {
+      top: 10px;
+      left: 258px;
+    }
   }
 
   &__logo {
@@ -20,6 +35,12 @@
     width: 54px;
     top: 17px;
     left: 19px;
+
+    @include responsive(laptop) {
+      width: 84px;
+      top: 28px;
+      left: 32px;
+    }
   }
 
   &__info {
@@ -55,13 +76,6 @@
   }
 
   @include responsive(laptop) {
-    width: 447px;
-
-    &--front {
-      top: 187px;
-      left: 164px;
-    }
-
     &__logo {
       width: 84px;
       top: 28px;
@@ -79,6 +93,7 @@
     }
 
     &__container-name-exp {
+      width: 383.14px;
       font-size: 14px;
       letter-spacing: 2px;
       margin-top: 25px;
