@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .form {
   max-width: 381px;
   display: flex;
@@ -18,15 +20,40 @@
     display: flex;
     flex-direction: column;
   }
+
+  &__exp-date-input-container {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.label {
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .input {
   height: 45px;
+  padding: 11px 16px;
   border-radius: 8px;
   border: 2px solid var(--light-grey);
   color: var(--deep-violet);
   font-size: 18px;
   font-weight: 500;
+
+  &::placeholder {
+    color: var(--deep-violet);
+    opacity: 0.25;
+  }
+}
+
+.blank-error {
+  color: #ff5050;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
 }
 
 .button-confirm {

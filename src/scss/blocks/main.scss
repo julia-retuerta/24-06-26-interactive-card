@@ -7,10 +7,6 @@
   background: url(../../assets/images/bg-main-mobile.png) no-repeat;
   background-size: contain;
 
-  @include responsive(tablet) {
-    background-size: cover;
-  }
-
   @include responsive(laptop) {
     flex-direction: row;
     gap: 221px;
