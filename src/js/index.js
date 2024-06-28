@@ -3,6 +3,8 @@ import '../scss/styles.scss';
 
 //const buttonConfirmElement = document.getElementById('button-confirm');
 
+// VERSIÓN LARGA
+
 const cardholderNameInputElement = document.getElementById('cardholder-name');
 const cardNameElement = document.getElementById('card-name');
 
@@ -47,9 +49,30 @@ cardholderExpDateMMInputElement.addEventListener('input', fillExpDateMonth);
 cardholderExpDateYYInputElement.addEventListener('input', fillExpDateYear);
 cardholderCvcInputElement.addEventListener('input', fillCvc);
 
-/*   const confirmEmptyFields = () => {
-  if ((input.value = '')) {
-  }
-}; */
+// IMPRIMIR ERRORES
 
-//buttonConfirmElement.addEventListener('click');
+const formElement = document.querySelectorAll('form');
+
+const defaultValues = {
+  name: 'JANE APPLESEED',
+  number: '0000 0000 0000 0000',
+  month: '00',
+  year: '00',
+  cvc: '000'
+};
+
+const writeInCard = event => {
+  const textCard = document.getElementById(`card-${event.target.id}`);
+  const onlyNumbers = '0123456789';
+  if (event.target.id === 'name') {
+    const value = event.target.value;
+    let isCorrect = true;
+    for (const letter of value) {
+      if (onlyNumbers.includes(letter)) {
+        isCorrect = false;
+      }
+    }
+  }
+};
+
+formElement.addEventListener('input', writeInCard);
