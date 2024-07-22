@@ -2,6 +2,8 @@
 
 .main {
   display: grid;
+  justify-content: center;
+  align-items: center;
   background: url(../../assets/images/bg-main-mobile.png) no-repeat;
   background-size: cover;
   max-height: 240px;

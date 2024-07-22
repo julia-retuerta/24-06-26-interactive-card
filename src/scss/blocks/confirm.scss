@@ -1,0 +1,34 @@
+@use '../mixins/responsive.scss' as *;
+
+.confirmation-message {
+  position: relative;
+  top: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    color: var(--deep-violet);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 3.422px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    color: var(--purplish-grey);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  @include responsive(laptop) {
+    width: 381px;
+    top: -60px;
+    left: 750px;
+  }
+}
+
+.hidden {
+  display: none;
+}

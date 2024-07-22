@@ -59,10 +59,18 @@
   &--mm,
   &--yy {
     width: 72px;
+
+    @include responsive(laptop) {
+      width: 80px;
+    }
   }
 
   &--cvc {
     width: 164px;
+
+    @include responsive(laptop) {
+      width: 191px;
+    }
   }
 }
 
@@ -80,4 +88,5 @@
   border-radius: 8px;
   color: var(--white-color);
   background-color: var(--deep-violet);
+  cursor: pointer;
 }
